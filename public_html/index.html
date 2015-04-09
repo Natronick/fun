@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bits and pieces</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" >//src="cutInPieces.js"
+            function cutInPieces() {
+                var text = document.getElementById("email");
+                console.log(text);
+                var bitsAndPieces = new Array();
+                var msgSize = 150;
+                while (text) {
+                    if (text.length < msgSize) {
+                        bitsAndPieces.push(text);
+                        console.log(bitsAndPieces);
+                        break;
+                    }
+                    else {
+                        bitsAndPieces.push(text.substr(0, msgSize));
+                        text = text.substr(msgSize);
+                        console.log(bitsAndPieces);
+                    }
+                }
+                console.log(bitsAndPieces);
+            }
+
+//                var text = documentGetElementByID("email");
+//                var bitsAndPieces = text.match(/.{1,250}/g);
+//                console.log(bitsAndPieces);
+                //for (i=0; i<bitsAndPieces.length; i+=1){
+                //   $("#output").append('<div class="msg" id=i>' + bitsAndPieces[i] + '</div>');
+                //}
+        </script>
+    </head>
+    <body>
+        <form action="javascript:cutInPieces();">
+            <textarea id="email" name="email" rows="20" cols="100"></textarea>
+            <br>
+            <input type="submit" value="cut in pieces">
+        </form>
+        <div id="output">
+            <!--            add all the strings made out of the big one.  -->
+        </div>
+
+    </body>
+</html>
