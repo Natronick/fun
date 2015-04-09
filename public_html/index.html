@@ -23,14 +23,23 @@
                     }
                 }
                 return(bitsAndPieces);
-                var output= document.getElementById("output");
+                var output = document.getElementById("output");
                 for (var i = 0; i < bitsAndPieces.length; i += 1) {
-                bitsAndPieces.push(bitsAndPieces[i]);
-                var div = document.createElement("div");
-                div.innerHTML = (bitsAndPieces[i]);
-                output.appendChild(div);
+                    bitsAndPieces.push(bitsAndPieces[i]);
+                    var div = document.createElement('div class="msg"');
+                    div.innerHTML = (bitsAndPieces[i]);
+                    output.appendChild(div);
             }
         </script>
+        <style type="text/css">
+            .msg {
+                background-color: #3333ff;
+                border-radius: 5px;
+                color: #ffffff;
+                width: 300px;
+                font-family: sans-serif;
+            }
+        </style>
     </head>
     <body>
         <form action="javascript:cutInPieces();">
@@ -40,6 +49,5 @@
         </form>
         <div id="output">
         </div>
-
     </body>
 </html>
