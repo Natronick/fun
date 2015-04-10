@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" >//src="cutInPieces.js"
             function cutInPieces() {
-                var text = document.getElementById("email");
+                var text = document.getElementById("email").value;
                 //console.log(text);
                 var bitsAndPieces = new Array();
                 var msgSize = 150;
@@ -22,14 +22,14 @@
                         //console.log(bitsAndPieces);
                     }
                 }
-                var output = document.getElementById("output");
+                //var output = document.getElementById("output");
                 for (var i = 0; i < bitsAndPieces.length; i += 1) {
-                    bitsAndPieces.push(bitsAndPieces[i]);
+                    //bitsAndPieces.push(bitsAndPieces[i]);
                     var div = document.createElement('div class="msg"');
                     div.innerHTML = (bitsAndPieces[i]);
                     output.appendChild(div);
+                }
             }
-        }
         </script>
         <style type="text/css">
             .msg {
