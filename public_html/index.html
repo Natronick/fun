@@ -25,7 +25,8 @@
                 var output = document.getElementById("output");
                 for (var i = 0; i < bitsAndPieces.length; i += 1) {
                     //bitsAndPieces.push(bitsAndPieces[i]);
-                    var div = document.createElement('div class="msg"');
+                    var div = document.createElement('div');
+                    div.class = "msg";
                     div.innerHTML = (bitsAndPieces[i]);
                     output.appendChild(div);
                 }
