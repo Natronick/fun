@@ -22,7 +22,6 @@
                         //console.log(bitsAndPieces);
                     }
                 }
-                return(bitsAndPieces);
                 var output = document.getElementById("output");
                 for (var i = 0; i < bitsAndPieces.length; i += 1) {
                     bitsAndPieces.push(bitsAndPieces[i]);
@@ -30,6 +29,7 @@
                     div.innerHTML = (bitsAndPieces[i]);
                     output.appendChild(div);
             }
+        }
         </script>
         <style type="text/css">
             .msg {
